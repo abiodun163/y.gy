@@ -1,0 +1,94 @@
+:root {
+  --nav-links: hsl(220, 9%, 46%);
+  --primary-color: hsl(215, 14%, 34%);
+  --dark: hsl(0, 0%, 0%);
+  --light: hsl(0, 0%, 100%);
+  --blue: hsl(227, 100%, 50%);
+  --blue-opac-900: hsl(227, 100%, 47% );
+
+  --btn-bg: hsl(220, 14%, 96%);
+}
+
+.logo {
+  color: #0037ff;
+  /* color: #6B7280; */ /*  - nav-links color */
+  /* color: #f3f4f6; */ /*  -button backgroundcolor */
+}
+
+.logo:hover,
+.logo:focus-within {
+  color: #0037ff;
+  font-weight: 700;
+}
+
+/* text color FAQ(ans) - #4B5563 [PRIMARY COLOR] */
+/* text color GET STARTED(paragraph) - #C3DAFE */
+
+header {
+  width: 100%;
+  border-block-end: 1px solid hsl(0, 0%, 90%);
+  backdrop-filter: blur(10px);
+}
+
+
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 6fr 2fr;
+  padding: 0.5rem 0;
+}
+
+.container .header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+.nav-links {
+  list-style-type: none;
+  color: var(--nav-links);
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+
+.nav-link {
+  display: flex;
+  column-gap: 7px;
+  align-items: center;
+}
+
+ul li {
+  padding: 0.25rem 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle {
+  background-color: var(--btn-bg);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.auth-buttons {
+  display: flex;
+  column-gap: 0.5rem;
+
+  justify-self: end;
+}
