@@ -18,7 +18,7 @@ const Header = () => {
           <ul className="nav-links">
             {/* FEATURES AND OTHER PRODUCTS WILL USE A DIFFERENT COMPONENT */}
 
-            <li className=" nav-list">
+            <li className="toggle nav-list">
               <DropLinks onOpen={isOpen} id={1} setOpen={setIsOpen}>
                 Features
               </DropLinks>
@@ -35,11 +35,11 @@ const Header = () => {
             <li className="nav-list">
               <Link to="/qr-creator">Free QR Code Creator</Link>
             </li>
-            <li className="nav-list">
+            
               <DropLinks onOpen={isOpen} id={2} setOpen={setIsOpen} img={true}>
                 Other Products
               </DropLinks>
-            </li>
+
           </ul>
         </nav>
         <div className="auth-buttons">

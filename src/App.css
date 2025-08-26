@@ -119,7 +119,7 @@ header {
 
 .dropdown {
   position: absolute;
-  top: 2.5rem;
+  top: 2rem;
   /* right: 0; */
   /* transform: translateX(-50%); */
   display: none;
@@ -138,10 +138,6 @@ header {
   position: relative;
 }
 
-.nav-links:hover .dropdown,
-.nav-links:focus-within .dropdown {
-  display: block;
-}
 .left-position {
   left: 0;
   display: block;

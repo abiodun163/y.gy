@@ -16,118 +16,122 @@ const NavLinks = ({ onOpen, children, id, setOpen, img }) => {
   const curOpen = id === onOpen;
 
   const handleToggle = () => {
-    setOpen(curOpen ? null : id);
+    setOpen(curOpen ? null : id); // Make ID to a state in the parent field and update it then move the hnadle toggle function there
   };
   return (
-    <div className="nav-item" onClick={handleToggle}>
-      <div className="nav-link">
-        <span>{children}</span>
-        <span className="icon">
-          {curOpen ? <GoChevronUp /> : <GoChevronDown />}
-        </span>
-      </div>
+    <li className="toggle nav-list" onMouseOver={handleToggle} onClick={handleToggle}>
+      <div className="nav-item" >
+        <div className="nav-link">
+          <span>{children}</span>
+          <span className="icon">
+            {curOpen ? <GoChevronUp /> : <GoChevronDown />}
+          </span>
+        </div>
 
-      {/* <ul className={`dropdown ${img ? "right-position" : "left-position"}`}>
+        {/* <ul className={`dropdown ${img ? "right-position" : "left-position"}`}>
         {!img ? (
           <>
-            <FeatureDropDown
-              icon="📊"
-              featuresTitle="Analytics"
-              nav="analytics"
-            />
-            <FeatureDropDown
-              icon="🔗"
-              featuresTitle="Custom Links"
-              nav="custom-links"
-            />
-            <FeatureDropDown
-              icon="📱"
-              featuresTitle="QR Codes"
-              nav="qr-codes"
-            />
-            <FeatureDropDown
-              icon="🤝"
-              featuresTitle="Team Collaboration"
-              nav="collaboration"
-            />
-            <FeatureDropDown
-              icon="🔌"
-              featuresTitle="Webhooks"
-              nav="integration"
-            />
+          <FeatureDropDown
+          icon="📊"
+          featuresTitle="Analytics"
+          nav="analytics"
+          />
+          <FeatureDropDown
+          icon="🔗"
+          featuresTitle="Custom Links"
+          nav="custom-links"
+          />
+          <FeatureDropDown
+          icon="📱"
+          featuresTitle="QR Codes"
+          nav="qr-codes"
+          />
+          <FeatureDropDown
+          icon="🤝"
+          featuresTitle="Team Collaboration"
+          nav="collaboration"
+          />
+          <FeatureDropDown
+          icon="🔌"
+          featuresTitle="Webhooks"
+          nav="integration"
+          />
           </>
-        ) : (
-          <>
+          ) : (
+            <>
             <FeatureDropDown
-              img={img1}
-              menuTitle="new.website"
-              menuBody="Amazing AI Website Generator"
+            img={img1}
+            menuTitle="new.website"
+            menuBody="Amazing AI Website Generator"
             />
             <FeatureDropDown
-              img={img2}
-              menuTitle="waitlist"
-              menuBody="Quick and Easy Waitlist with Built-in Referrals"
+            img={img2}
+            menuTitle="waitlist"
+            menuBody="Quick and Easy Waitlist with Built-in Referrals"
             />
             <FeatureDropDown
-              img={img3}
-              menuTitle="LilSurvey"
-              menuBody="Stunning Survey That Converts"
+            img={img3}
+            menuTitle="LilSurvey"
+            menuBody="Stunning Survey That Converts"
             />
           </>
         )}
-      </ul> */}
-      {curOpen && (
-        <ul className={`dropdown ${img ? "right-position" : "left-position"}`}>
-          {!img ? (
-            <>
-              <FeatureDropDown
-                icon="📊"
-                featuresTitle="Analytics"
-                nav="analytics"
-              />
-              <FeatureDropDown
-                icon="🔗"
-                featuresTitle="Custom Links"
-                nav="custom-links"
-              />
-              <FeatureDropDown
-                icon="📱"
-                featuresTitle="QR Codes"
-                nav="qr-codes"
-              />
-              <FeatureDropDown
-                icon="🤝"
-                featuresTitle="Team Collaboration"
-                nav="collaboration"
-              />
-              <FeatureDropDown
-                icon="🔌"
-                featuresTitle="Webhooks"
-                nav="integration"
-              />
-            </>
-          ) : (
-            <>
-              <FeatureDropDown
-                img={img1}
-                menuTitle="new.website"
-                menuBody="Amazing AI Website Generator"
-              />
-              <FeatureDropDown
-                img={img2}
-                menuTitle="waitlist"
-                menuBody="Quick and Easy Waitlist with Built-in Referrals"
-              />
-              <FeatureDropDown
-                img={img3}
-                menuTitle="LilSurvey"
-                menuBody="Stunning Survey That Converts"
-              />
-            </>
-          )}
-        </ul>
-      )}
-    </div>
+        </ul> */}
+        {curOpen && (
+          <ul
+            className={`dropdown ${img ? "right-position" : "left-position"}`}
+          >
+            {!img ? (
+              <>
+                <FeatureDropDown
+                  icon="📊"
+                  featuresTitle="Analytics"
+                  nav="analytics"
+                />
+                <FeatureDropDown
+                  icon="🔗"
+                  featuresTitle="Custom Links"
+                  nav="custom-links"
+                />
+                <FeatureDropDown
+                  icon="📱"
+                  featuresTitle="QR Codes"
+                  nav="qr-codes"
+                />
+                <FeatureDropDown
+                  icon="🤝"
+                  featuresTitle="Team Collaboration"
+                  nav="collaboration"
+                />
+                <FeatureDropDown
+                  icon="🔌"
+                  featuresTitle="Webhooks"
+                  nav="integration"
+                />
+              </>
+            ) : (
+              <>
+                <FeatureDropDown
+                  img={img1}
+                  menuTitle="new.website"
+                  menuBody="Amazing AI Website Generator"
+                />
+                <FeatureDropDown
+                  img={img2}
+                  menuTitle="waitlist"
+                  menuBody="Quick and Easy Waitlist with Built-in Referrals"
+                />
+                <FeatureDropDown
+                  img={img3}
+                  menuTitle="LilSurvey"
+                  menuBody="Stunning Survey That Converts"
+                />
+              </>
+            )}
+          </ul>
+        )}
+      </div>
+    </li>
   );
 };
 
