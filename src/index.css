@@ -1,4 +1,6 @@
-/* @import "tailwindcss"; */
+@import "tailwindcss";
+
+
 
 :root {
   --primary-color: hsl(215, 14%, 34%);
@@ -7,6 +9,7 @@
   --blue: hsl(227, 100%, 50%);
   --blue-opac-900: hsl(227, 100%, 47% );
 }
+
 
 * {
   box-sizing: border-box;

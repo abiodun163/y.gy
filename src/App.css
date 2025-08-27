@@ -9,10 +9,6 @@
   --btn-bg: hsl(220, 14%, 96%);
 }
 
-/* .show {
-  display: none;
-} */
-
 .logo {
   color: #0037ff;
   /* color: #6B7280; */ /*  - nav-links color */
@@ -92,6 +88,10 @@ header {
   position: relative;
 }
 
+.toggle {
+  position: relative;
+}
+
 .toggle:hover {
   background-color: var(--btn-bg);
   border-radius: 0.55rem;
@@ -119,7 +119,7 @@ header {
 
 .dropdown {
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   /* right: 0; */
   /* transform: translateX(-50%); */
   display: none;
@@ -139,12 +139,12 @@ header {
 }
 
 .left-position {
-  left: 0;
+  left: -10px;
   display: block;
 }
 .right-position {
   display: block;
-  right: 0;
+  right: -10px;
 }
 
 .dropdown li {
@@ -203,3 +203,4 @@ header {
 main {
   padding-block-start: 4rem;
 }
+
